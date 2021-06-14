@@ -7,11 +7,11 @@ int main()
     int i;
     FILE* fout; // 出力用ファイルポインタ
     if ((fout = fopen("output.txt", "w")) == NULL){ // もしファイルを開けなかったら
-        fprintf(stderr, "Cannot open file¥n");
+        fprintf(stderr, "Cannot open file\n");
         exit(0);
     }
     for (i = 0;i < 100;i++){ // ファイルへの書き込み
-        fprintf(fout, "%f¥n", (double)rand() / RAND_MAX);
+        fprintf(fout, "%f\n", (double)rand() / RAND_MAX);
     }
     fclose(fout); // ファイルを閉じる
 }
